@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ExperimentWithControls"
         mc:Ignorable="d"
         Title="Experiment With Controls" Height="450" Width="800">
-    <Grid>
+	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition/>
 			<RowDefinition/>
@@ -16,5 +16,39 @@
 			<ColumnDefinition/>
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
+		<Label Content="Enter a number." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
+		<TextBlock x:Name="number" Grid.Column="1" HorizontalAlignment="Center" Text="#" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24"/>
+		<TextBox x:Name="numberTextBox" HorizontalAlignment="Left" Margin="10,49,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18" TextChanged="numberTextBox_TextChanged" PreviewTextInput="numberTextBox_PreviewTextInput"/>
+
+		<RadioButton Content="1" Margin="200,49,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<RadioButton Content="2" Margin="230,49,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<RadioButton Content="3" Margin="265,49,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<RadioButton Content="4" Margin="200,69,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<RadioButton Content="5" Margin="230,69,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<RadioButton Content="6" Margin="265,69,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<ListBox x:Name="myListBox" Grid.Row="1" Margin="10,10,10,10">
+			<ListBoxItem Content="1"/>
+			<ListBoxItem Content="2"/>
+			<ListBoxItem Content="3"/>
+			<ListBoxItem Content="4"/>
+			<ListBoxItem Content="5"/>
+		</ListBox>
+
+		<ComboBox x:Name="readOnlyComboBox" Grid.Column="1" Margin="10,10,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120">
+			<ListBoxItem Content="1"/>
+			<ListBoxItem Content="2"/>
+			<ListBoxItem Content="3"/>
+			<ListBoxItem Content="4"/>
+			<ListBoxItem Content="5"/>
+		</ComboBox>
+
+		<ComboBox x:Name="editableComboBox" Grid.Column="1" Grid.Row="1" IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="270,10,0,0">
+			<ListBoxItem Content="1"/>
+			<ListBoxItem Content="2"/>
+			<ListBoxItem Content="3"/>
+			<ListBoxItem Content="4"/>
+			<ListBoxItem Content="5"/>
+		</ComboBox>
+
 	</Grid>
 </Window>
